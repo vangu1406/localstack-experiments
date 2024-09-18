@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stored records</title>
+</head>
+
+<body>
+    {% block content %}
+    <div style="width: 100%; margin: auto">
+        {% if jsonlist %}
+            {% for record in jsonlist %}
+                <p>{{ record }}</p>
+            {% endfor %}
+        {% else %}
+            <p>No records found</p>
+        {% endif %}
+    </div>
+    {% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Flask app</title>
+</head>
+
+<body>
+	<h1>Upload file to S3 bucket:</h1>
+
+	<form action="/upload" method="POST" enctype="multipart/form-data">
+		<br>
+		<input type="file" name="file" />
+		<br>
+		<input type="submit" value="Upload" />
+	</form>
+
+	<br>
+
+	<a href="{{ url_for('view') }}">Click here to view your current records</a>
+</body>
+
+</html>
